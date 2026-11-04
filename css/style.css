@@ -1,29 +1,25 @@
+
+/* GENERELT */
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #003F38;
+}
 
 /* Skrifttyper */
 
-body {
-    font-family: 'Lato', sans-serif;
-}
-
-/* Overskrifter */
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Knapper */
-
+h1, h2, h3, h4, h5, h6,
 button {
     font-family: 'Montserrat', sans-serif;
 }
 
 
-/* Header */
+/* HEADER */
 
 header {
     display: flex;
@@ -71,7 +67,7 @@ header {
 }
 
 
-/* Hero-sektion */
+/* HERO-SEKTION */
 
 main {
     background-color: #003F38;
@@ -101,17 +97,6 @@ main {
     margin-bottom: 20px;
 }
 
-.hero-text button {
-    background-color: #E85A2A;
-    color: #F5F1E8;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-
 .hero-image {
     width: 45%;
     height: 220px;
@@ -120,55 +105,34 @@ main {
     border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-    .hero-content {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .hero-image {
-        width: 45%;
-    }
-}
-
-
-/* Kategorier */
-
-.categories {
-    background-color: #147D73;
-    padding: 15px 10px;
-}
-
-body {
-    background-color: #003F38;
-}
-
-.categories h2{
-    font-size: 18px;
+.hero-text button,
+.daily-bottom button,
+.guide-content button {
+    background-color: #E85A2A;
     color: #F5F1E8;
+    border: none;
+    font-weight: bold;
+    border-radius: 12px;
 }
+
+.hero-text button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+
+/* KATEGORIER */
+
 .categories {
     background-color: #147D73;
     padding: 15px 10px 60px;
 }
 
-.category-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.category {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-    background-color: #F5F1E8;
-    color: #56312F;
-    padding: 12px 15px;
-    border-radius: 15px;
-    text-decoration: none;
+.categories h2 {
     font-size: 18px;
-    font-weight: bold;
+    color: #F5F1E8;
 }
 
 .categories-content {
@@ -186,10 +150,17 @@ body {
     margin-bottom: 20px;
 }
 
-.category-image {
-    width: 45%;
-    height: auto;
-    border-radius: 10px;
+.category {
+    display: flex;
+    align-items: center;
+    background-color: #F5F1E8;
+    color: #56312F;
+    padding: 12px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .category img {
@@ -198,12 +169,18 @@ body {
     margin-right: 15px;
 }
 
+.category-image {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .arrow {
     margin-left: auto;
 }
 
 
-/* Dagens grønne valg */
+/* DAGENS GRØNNE VALG */
 
 .daily-choice {
     position: relative;
@@ -278,17 +255,12 @@ body {
 .daily-bottom button {
     display: block;
     margin-left: auto;
-    background-color: #E85A2A;
-    color: #F5F1E8;
-    border: none;
     padding: 12px;
     font-size: 14px;
-    font-weight: bold;
-    border-radius: 12px;
 }
 
 
-/* Guide-sektion */
+/* GUIDE-SEKTION */
 
 .guide-teaser {
     background-color: #F5F1E8;
@@ -322,17 +294,12 @@ body {
 .guide-content button {
     display: block;
     margin-left: auto;
-    background-color: #E85A2A;
-    color: #F5F1E8;
-    border: none;
     padding: 12px;
     font-size: 14px;
-    font-weight: bold;
-    border-radius: 12px;
 }
 
 
-/* Footer */
+/* FOOTER */
 
 .footer {
     background-color: #147D73;
@@ -373,17 +340,6 @@ body {
     white-space: nowrap;
 }
 
-.footer-social a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-social img {
-    width: 20px;
-    height: 20px;
-}
-
 .footer h3 {
     font-size: 16px;
     margin-bottom: 5px;
@@ -393,6 +349,17 @@ body {
     color: #F5F1E8;
     text-decoration: none;
     font-size: 16px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-social img {
+    width: 20px;
+    height: 20px;
 }
 
 .footer hr {
@@ -412,8 +379,6 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #F5F1E8;
-    text-decoration: none;
     font-size: 14px;
 }
 
