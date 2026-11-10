@@ -102,13 +102,17 @@ nav {
 main {
     background-color: #003F38;
     color: #F5F1E8;
-    padding: 40px 15px;
+    padding: 0;
 }
+
+
+/* HERO-SEKTION */
 
 .hero-content {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 40px 15px;
 }
 
 .hero-text {
@@ -116,9 +120,27 @@ main {
     min-width: 0;
 }
 
+.hero-label {
+    display: block;
+    color: #E85A2A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
 .hero-text h1 {
     font-size: 24px;
+    line-height: 1.2;
     margin-bottom: 15px;
+}
+
+.hero-highlight {
+    text-decoration: underline;
+    text-decoration-color: #E85A2A;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
 }
 
 .hero-text p {
@@ -132,8 +154,9 @@ main {
     height: 220px;
     object-fit: cover;
     object-position: 65% center;
-    border-radius: 10px;
+    border-radius: 45% 15% 40% 15%;
 }
+
 
 
 /* FÆLLES KNAPPER */
@@ -153,9 +176,6 @@ main {
     text-decoration: none;
 }
 
-.hero-text a {
-    margin-left: 120px;
-}
 
 .daily-bottom a, .guide-content a {
     display: block;
@@ -163,60 +183,92 @@ main {
     margin: 0 0 0 auto;
 }
 
+
 /* KATEGORIER */
 
 .categories {
     background-color: #147D73;
-    padding: 20px 15px 60px;
+    padding: 35px 15px 55px;
+}
+
+.categories-inner {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .categories h2 {
-    font-size: 24px;
     color: #F5F1E8;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.categories-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.categories-intro {
+    color: #F5F1E8;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
 }
 
-.category-list {
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.category-card {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    flex: 1;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.category {
-    display: flex;
-    align-items: center;
-    background-color: #F5F1E8;
-    color: #56312F;
-    padding: 18px 15px;
+    overflow: hidden;
     border-radius: 15px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    color: #56312F;
+    transition: transform 0.2s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.category-text {
+    position: relative;
+    padding: 12px;
+    min-height: 105px;
+}
+
+.category-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.category-text p {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-right: 15px;
+}
+
+.arrow {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
     font-size: 20px;
     font-weight: bold;
 }
 
-.category img {
-    width: 30px;
-    height: 30px;
-    margin-right: 12px;
+/* Kategoriernes farver */
+
+.food .category-text,
+.shopping .category-text {
+    background-color: #F5F1E8;
 }
 
-.category-image {
-    width: 40%;
-    height: auto;
-    border-radius: 10px;
+.reuse .category-text {
+    background-color: #E9CDB5;
 }
 
-.arrow {
-    margin-left: auto;
+.transport .category-text {
+    background-color: #D7E4C5;
 }
 
 
@@ -292,11 +344,6 @@ main {
     line-height: 1.4;
 }
 
-.daily-bottom button {
-    display: block;
-    margin-left: auto;
-}
-
 
 /* GUIDE-SEKTION */
 
@@ -329,10 +376,6 @@ main {
     margin-bottom: 20px;
 }
 
-.guide-content button {
-    display: block;
-    margin-left: auto;
-}
 
 
 /* FOOTER */
@@ -423,12 +466,16 @@ main {
 }
 
 
+
 /* DESKTOP */
 
 @media screen and (min-width: 769px) {
 
+    /* HEADER */
+
     header {
         height: 110px;
+        padding: 20px 5%;
     }
 
     .logo {
@@ -450,7 +497,7 @@ main {
     nav ul {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
         list-style: none;
         padding: 0;
     }
@@ -460,9 +507,273 @@ main {
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
+        font-size: 17px;
     }
 
     .search-button {
         font-size: 20px;
     }
+
+
+    /* HERO DESKTOP */
+
+.hero-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 60px;
+    padding: 35px 20px;
+    position: relative;
 }
+
+.hero-text {
+    padding-left: 20px;
+}
+
+.hero-label {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    max-width: 550px;
+}
+
+.hero-image {
+    width: 43%;
+    height: 370px;
+    border-radius: 45% 15% 40% 15%;
+}
+
+/* Dekorativ stjerne */
+
+.hero-content::after {
+    content: "✳";
+    position: absolute;
+    color: #E85A2A;
+    font-size: 45px;
+    right: 2%;
+    bottom: 10px;
+}
+
+
+    /* MAIN OG HERO */
+
+    main {
+        padding: 0;
+    }
+
+    .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-image {
+        width: 40%;
+        height: 320px;
+    }
+
+
+   
+/* KATEGORIER DESKTOP */
+
+.categories {
+    padding: 50px 5% 70px;
+}
+
+.categories h2 {
+    font-size: 32px;
+}
+
+.categories-intro {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.category-card img {
+    height: 200px;
+}
+
+.category-text {
+    padding: 18px;
+    min-height: 125px;
+}
+
+.category-text h3 {
+    font-size: 21px;
+}
+
+.category-text p {
+    font-size: 15px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+    /* DAGENS GRØNNE VALG */
+
+    .daily-choice {
+        max-width: 1100px;
+        margin: -45px auto 50px;
+        padding: 35px;
+    }
+
+    .daily-label h2 {
+        font-size: 22px;
+    }
+
+    .daily-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        min-height: 230px;
+        padding-right: 45%;
+        justify-content: center;
+    }
+
+    .daily-content h3 {
+        font-size: 26px;
+    }
+
+    .daily-content p {
+        font-size: 18px;
+    }
+
+    .fridge-image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 220px;
+        margin: 0;
+        border-radius: 12px;
+    }
+
+    .daily-bottom {
+        padding: 25px;
+    }
+
+    .daily-bottom h3 {
+        font-size: 22px;
+    }
+
+    .daily-bottom p {
+        font-size: 18px;
+    }
+
+    .daily-bottom a {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+
+    /* GUIDE */
+
+    .guide-teaser {
+        display: flex;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .guide-image {
+        width: 50%;
+        height: 350px;
+    }
+
+    .guide-content {
+        flex: 1;
+        padding: 40px;
+    }
+
+    .guide-content h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .guide-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .guide-content a {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 45px 5% 25px;
+    }
+
+    .footer-top {
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 50px;
+        padding-bottom: 35px;
+    }
+
+    .footer-logo {
+        width: 200px;
+        transform: none;
+    }
+
+    .footer-links {
+        transform: none;
+    }
+
+    .footer-links,
+    .footer-social {
+        flex: 1;
+        gap: 15px;
+    }
+
+    .footer h3 {
+        font-size: 19px;
+    }
+
+    .footer a {
+        font-size: 17px;
+    }
+
+    .footer-bottom {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+
+    .footer-bottom a {
+        font-size: 16px;
+    }
+}
+
