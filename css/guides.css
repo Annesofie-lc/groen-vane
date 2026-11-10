@@ -1,0 +1,50 @@
+
+/* HERO - GUIDES OG TIPS */
+
+.guides-hero {
+    background-color: #003F38;
+    color: #F5F1E8;
+    padding: 45px 20px;
+    overflow: hidden;
+}
+
+.guides-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.guides-hero-text {
+    position: relative;
+}
+
+.guides-label {
+    display: inline-block;
+    color: #E85A2A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.guides-hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.guides-hero p {
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 450px;
+}
+
+.guides-hero-image {
+    width: 85%;
+    height: 220px;
+    align-self: center;
+    object-fit: cover;
+    border-radius: 45% 15% 40% 15%;
+}
