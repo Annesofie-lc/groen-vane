@@ -1,0 +1,17 @@
+<script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navigation = document.querySelector('#primary-navigation');
+
+    burgerMenu.addEventListener('click', function() {
+
+        const isOpen = navigation.classList.toggle('is-open');
+
+        burgerMenu.setAttribute('aria-expanded', isOpen);
+
+        burgerMenu.setAttribute(
+            'aria-label',
+            isOpen ? 'Luk menu' : 'Åbn menu'
+        );
+
+    });
+</script>

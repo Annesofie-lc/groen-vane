@@ -1,4 +1,5 @@
 
+
 /* GENERELT */
 
 * {
@@ -18,6 +19,14 @@ button {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Fokusmarkering – tilgængelighed */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #E85A2A;
+    outline-offset: 4px;
+}
+
 
 /* HEADER */
 
@@ -25,31 +34,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
+    height: 90px;
     background-color: #F5F1E8;
     padding: 20px;
 }
 
-.burger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    padding: 10px;
-}
-
-.burger-menu span {
-    width: 34px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: #003F38;
-}
+/* Logo */
 
 .logo {
-    width: 200px;
+    width: 150px;
     height: auto;
 }
+
+/* Knapper til højre */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Søgeknap */
 
 .search-button {
     display: flex;
@@ -58,12 +63,37 @@ header {
     background: none;
     border: none;
     color: #003F38;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .search-button img {
     width: 24px;
     height: 24px;
+}
+
+/* Burger-menu */
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #003F38;
+}
+
+/* Navigation */
+
+nav {
+    display: none;
 }
 
 
@@ -105,48 +135,58 @@ main {
     border-radius: 10px;
 }
 
-.hero-text button,
-.daily-bottom button,
-.guide-content button {
+
+/* FÆLLES KNAPPER */
+
+.hero-text a,
+.daily-bottom a,
+.guide-content a {
+    display: inline-block;
     background-color: #E85A2A;
     color: #F5F1E8;
     border: none;
-    font-weight: bold;
     border-radius: 12px;
-}
-
-.hero-text button {
-    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 12px;
     font-size: 14px;
-    border-radius: 10px;
-    margin-left: 10px;
+    text-decoration: none;
 }
 
+.hero-text a {
+    margin-left: 120px;
+}
+
+.daily-bottom a, .guide-content a {
+    display: block;
+    width: fit-content;
+    margin: 0 0 0 auto;
+}
 
 /* KATEGORIER */
 
 .categories {
     background-color: #147D73;
-    padding: 15px 10px 60px;
+    padding: 20px 15px 60px;
 }
 
 .categories h2 {
-    font-size: 18px;
+    font-size: 24px;
     color: #F5F1E8;
 }
 
 .categories-content {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .category-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     flex: 1;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 
@@ -155,22 +195,22 @@ main {
     align-items: center;
     background-color: #F5F1E8;
     color: #56312F;
-    padding: 12px 15px;
+    padding: 18px 15px;
     border-radius: 15px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .category img {
-    width: 28px;
-    height: 20px;
-    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
 }
 
 .category-image {
-    width: 45%;
+    width: 40%;
     height: auto;
     border-radius: 10px;
 }
@@ -255,8 +295,6 @@ main {
 .daily-bottom button {
     display: block;
     margin-left: auto;
-    padding: 12px;
-    font-size: 14px;
 }
 
 
@@ -294,8 +332,6 @@ main {
 .guide-content button {
     display: block;
     margin-left: auto;
-    padding: 12px;
-    font-size: 14px;
 }
 
 
@@ -318,7 +354,6 @@ main {
 .footer-logo {
     width: 125px;
     height: auto;
-    margin-top: 0;
     transform: translate(-20px, -25px);
 }
 
@@ -385,4 +420,49 @@ main {
 .footer-bottom img {
     width: 22px;
     height: 22px;
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 769px) {
+
+    header {
+        height: 110px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .header-actions {
+        margin-left: 20px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav a {
+        color: #003F38;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+
+    .search-button {
+        font-size: 20px;
+    }
 }
