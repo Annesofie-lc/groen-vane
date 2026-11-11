@@ -26,7 +26,37 @@
     <!-- HEADER -->
 
     <header>
-        <!-- Her kopierer du hele din header fra index.html -->
+       <a href="index.html">
+        <img class="logo" src="img/logo-grønvane.png" alt="Grøn Vane - forsiden">
+    </a>
+
+    <nav id="primary-navigation" aria-label="Hovedmenu">
+        <ul>
+            <li><a href="#">Inspiration</a></li>
+            <li><a href="#">Myter og fakta</a></li>
+            <li><a href="#">Guides og tips</a></li>
+            <li><a href="#">Om os</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="search-button" type="button" aria-label="Søg">
+            <img src="img/magnifying-glass-solid-full.svg" alt="">
+            <span>Søg</span>
+        </button>
+
+        <button class="burger-menu"
+                type="button"
+                aria-label="Åbn menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
     </header>
 
     <!-- INDHOLD -->
@@ -53,18 +83,164 @@
                 </div>
 
                 <img class="guides-hero-image"
-                     src="img/plantinhands.jpg"
-                     alt="Hænder der planter en lille grøn plante">
+                     src="img/citybiking.jpg"
+                     alt="cykler med indkøb af grøntsager">
 
             </div>
 
         </section>
 
+
+<!-- INTRODUKTION -->
+<section class="guides-intro">
+
+    <div class="intro-content">
+
+        <div class="intro-text">
+            <h2>Forstå den grønne hverdag</h2>
+
+            <p>
+                Bæredygtighed handler ikke om at være perfekt,
+                men om at træffe bedre valg – også når det er i
+                små skridt. Her kan du blive klogere på, hvordan
+                dine valg påvirker klimaet, og hvorfor det giver
+                mening at tage ansvar.
+            </p>
+
+            <a href="#">Læs mere →</a>
+        </div>
+
+        <img src="img/globe-illustration.png"
+             alt="Illustration af en grøn jordklode med et blad"
+             class="intro-image">
+
+    </div>
+
+</section>
+
+<section class="selected-guides">
+
+    <div class="selected-guides-heading">
+        <span class="guides-label">FIND INSPIRATION</span>
+        <h2>Udvalgte guides</h2>
+        <p>Små idéer og konkrete råd, du kan tage med dig i hverdagen.</p>
+    </div>
+
+    <div class="guide-cards">
+
+        <article class="guide-card">
+            <img src="img/grøntsagsrester.png" alt="Friske råvarer på et køkkenbord">
+            <div class="guide-card-text">
+                <span>MAD OG MADVANER</span>
+                <h3>Få mere ud af dine råvarer</h3>
+                <p>Gode råd til at mindske madspild og bruge det, du allerede har i køleskabet.</p>
+                <a href="#">Læs guiden →</a>
+            </div>
+        </article>
+
+        <article class="guide-card">
+            <img src="img/genbrugsgarderobe.png" alt="Genbrugstøj på en bøjlestang">
+            <div class="guide-card-text">
+                <span>FORBRUG OG GENBRUG</span>
+                <h3>Tænk anderledes, når du køber nyt</h3>
+                <p>Bliv inspireret til at købe brugt, bytte og få mere ud af det, du ejer.</p>
+                <a href="#">Læs guiden →</a>
+            </div>
+        </article>
+
+        <article class="guide-card">
+            <img src="img/bike.jpg" alt="Cykel parkeret ved en bygning">
+            <div class="guide-card-text">
+                <span>TRANSPORT</span>
+                <h3>Gør transporten lidt grønnere</h3>
+                <p>Se hvordan små ændringer i dine transportvaner kan gøre en forskel.</p>
+                <a href="#">Læs guiden →</a>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="small-changes">
+
+    <img src="img/coffee-cup.jpg"
+         alt="Genanvendelig kaffekop"
+         class="small-changes-image">
+
+    <div class="small-changes-text">
+        <h2>Små ændringer,<br> stor forskel</h2>
+
+        <p>
+            Det behøver ikke være stort for at gøre en
+            forskel. Her er 5 nemme vaner, du kan
+            starte med allerede i dag.
+        </p>
+
+        <a href="#">Se 5 grønne vaner →</a>
+    </div>
+
+</section>
+
     </main>
 
     <!-- FOOTER -->
 
-    <!-- Her kopierer du din footer fra index.html -->
+  <footer class="footer">
+
+    <div class="footer-top">
+
+        <a href="index.html">
+            <img src="img/logo-grønvane.png" alt="Grøn Vane" class="footer-logo">
+        </a>
+
+        <div class="footer-links">
+            <h3>Om Grøn Vane</h3>
+            <a href="#">Guides</a>
+            <a href="#">FAQ</a>
+            <a href="#">Kontakt</a>
+        </div>
+
+       <div class="footer-social">
+            <h3>Sociale medier</h3>
+
+            <a href="#">
+                <img src="img/instagram-brands-solid-full.svg" alt="">
+                 Instagram
+            </a>
+
+            <a href="#">
+                <img src="img/facebook-brands-solid-full.svg" alt="">
+                Facebook
+            </a>
+
+            <a href="#">
+                <img src="img/tiktok-brands-solid-full.svg" alt="">
+                TikTok
+            </a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <a href="#">
+            <img src="img/globe-solid-full.svg" alt="">
+            Dansk
+        </a>
+
+        <a href="#">
+            <img src="img/person-solid-full.svg" alt="">
+            Tilgængelighed
+        </a>
+
+        <a href="#">Privatlivspolitik</a>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>

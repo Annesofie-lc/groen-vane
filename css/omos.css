@@ -1,0 +1,37 @@
+/*Kontaktform*/
+
+.kontaktform {
+  border-radius: 5px;
+  background-color: #147D73;
+  padding: 1.3em;
+  width: 50%;
+  margin: 0 auto; /*Centrerer elementet på siden*/
+}
+
+/*Andre style elementer*/
+
+.visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+/*Responsiv tilpasning*/
+
+@media only screen and (max-width: 850px){
+	main{
+		width: 100% !important;
+	}
+	body{
+		margin: 0;
+	}
+	header{
+		margin-bottom: 0;
+	}
+}
