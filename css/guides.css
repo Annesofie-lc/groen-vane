@@ -192,17 +192,19 @@
 .small-changes-text h2 {
     font-size: 24px;
     margin: 15px 0 10px;
+    color: #003F38;
 }
 
 .small-changes-text p {
     font-size: 15px;
     line-height: 1.5;
     margin-bottom: 18px;
+    color: #003F38;
 }
 
 .small-changes-text a {
     display: inline-block;
-    background-color: #003F38;
+    background-color:#E85A2A;
     color: #F5F1E8;
     padding: 12px 20px;
     border-radius: 25px;
