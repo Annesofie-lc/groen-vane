@@ -31,6 +31,11 @@
     color: #F5F1E8;
 }
 
+.guides-label {
+    color: #E85A2A;
+    font-weight: bold;
+}
+
 .guides-hero h1 {
     font-size: 36px;
     margin-bottom: 15px;
