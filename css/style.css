@@ -1,5 +1,4 @@
 
-
 /* GENERELT */
 
 * {
@@ -15,7 +14,10 @@ body {
 /* Skrifttyper */
 
 h1, h2, h3, h4, h5, h6,
-button {
+button,
+.hero-text a,
+.daily-bottom a,
+.guide-content a {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -64,6 +66,7 @@ header {
     border: none;
     color: #003F38;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .search-button img {
@@ -105,9 +108,6 @@ main {
     padding: 0;
 }
 
-
-/* HERO-SEKTION */
-
 .hero-content {
     display: flex;
     align-items: center;
@@ -123,7 +123,6 @@ main {
 .hero-label {
     display: block;
     color: #E85A2A;
-    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -158,7 +157,6 @@ main {
 }
 
 
-
 /* FÆLLES KNAPPER */
 
 .hero-text a,
@@ -169,15 +167,14 @@ main {
     color: #F5F1E8;
     border: none;
     border-radius: 12px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     padding: 12px;
     font-size: 14px;
     text-decoration: none;
 }
 
-
-.daily-bottom a, .guide-content a {
+.daily-bottom a,
+.guide-content a {
     display: block;
     width: fit-content;
     margin: 0 0 0 auto;
@@ -222,7 +219,6 @@ main {
     border-radius: 15px;
     text-decoration: none;
     color: #56312F;
-    transition: transform 0.2s ease;
 }
 
 .category-card img {
@@ -377,7 +373,6 @@ main {
 }
 
 
-
 /* FOOTER */
 
 .footer {
@@ -466,7 +461,6 @@ main {
 }
 
 
-
 /* DESKTOP */
 
 @media screen and (min-width: 769px) {
@@ -505,7 +499,6 @@ main {
     nav a {
         color: #003F38;
         text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 17px;
     }
@@ -516,54 +509,6 @@ main {
 
 
     /* HERO DESKTOP */
-
-.hero-content {
-    max-width: 1300px;
-    margin: 0 auto;
-    gap: 60px;
-    padding: 35px 20px;
-    position: relative;
-}
-
-.hero-text {
-    padding-left: 20px;
-}
-
-.hero-label {
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 19px;
-    max-width: 550px;
-}
-
-.hero-image {
-    width: 43%;
-    height: 370px;
-    border-radius: 45% 15% 40% 15%;
-}
-
-/* Dekorativ stjerne */
-
-.hero-content::after {
-    content: "✳";
-    position: absolute;
-    color: #E85A2A;
-    font-size: 45px;
-    right: 2%;
-    bottom: 10px;
-}
-
-
-    /* MAIN OG HERO */
 
     main {
         padding: 0;
@@ -576,8 +521,19 @@ main {
         gap: 40px;
     }
 
+    .hero-text {
+        padding-left: 20px;
+    }
+
+    .hero-label {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
     .hero-text h1 {
         font-size: 38px;
+        line-height: 1.15;
+        margin-bottom: 20px;
     }
 
     .hero-text p {
@@ -589,223 +545,260 @@ main {
         height: 320px;
     }
 
+    /* Dekorativ stjerne */
 
-   
-/* KATEGORIER DESKTOP */
+    .hero-content::after {
+        content: "✳";
+        position: absolute;
+        color: #E85A2A;
+        font-size: 45px;
+        right: 2%;
+        bottom: 10px;
+    }
 
-.categories {
-    padding: 50px 5% 70px;
+
+    /* KATEGORIER DESKTOP */
+
+    .categories {
+        padding: 50px 5% 70px;
+    }
+
+    .categories h2 {
+        font-size: 32px;
+    }
+
+    .categories-intro {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+
+    .category-card img {
+        height: 200px;
+    }
+
+    .category-text {
+        padding: 18px;
+        min-height: 125px;
+    }
+
+    .category-text h3 {
+        font-size: 21px;
+    }
+
+    .category-text p {
+        font-size: 15px;
+    }
+
+
+    /* DAGENS GRØNNE VALG - DESKTOP */
+
+    .daily-choice {
+        max-width: 1100px;
+        margin: -45px auto 60px;
+        padding: 35px;
+        border-radius: 30px;
+    }
+
+    .daily-label {
+        padding: 12px 18px;
+    }
+
+    .daily-label h2 {
+        font-size: 22px;
+    }
+
+    .daily-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .daily-content h3 {
+        font-size: 27px;
+        grid-column: 1;
+        align-self: end;
+    }
+
+    .daily-content p {
+        font-size: 18px;
+        grid-column: 1;
+        align-self: start;
+    }
+
+    .fridge-image {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 0;
+        transform: translateY(-35px);
+    }
+
+    .daily-bottom {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-top: 30px;
+        padding: 25px;
+    }
+
+    .daily-bottom h3 {
+        font-size: 20px;
+        flex: 1;
+    }
+
+    .daily-bottom p {
+        font-size: 16px;
+        flex: 1;
+    }
+
+    .daily-bottom a {
+        white-space: nowrap;
+    }
+
+
+    /* GUIDE-SEKTION - DESKTOP */
+
+    .guide-teaser {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 1300px;
+        margin: 50px auto 70px;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    .guide-image {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .guide-content {
+        padding: 45px;
+    }
+
+    .guide-content h2 {
+        font-size: 30px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .guide-content p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .guide-content a {
+        margin-left: auto;
+    }
+
+
+    /* FOOTER - DESKTOP */
+
+    .footer {
+        padding: 45px 6% 25px;
+    }
+
+    .footer-top {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+        padding-bottom: 40px;
+    }
+
+    .footer-logo {
+        width: 190px;
+        transform: none;
+    }
+
+    .footer-links {
+        transform: none;
+    }
+
+    .footer-links,
+    .footer-social {
+        gap: 15px;
+    }
+
+    .footer h3 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .footer a {
+        font-size: 16px;
+        width: fit-content;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .footer hr {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding-top: 25px;
+        justify-content: flex-end;
+        gap: 35px;
+    }
 }
 
-.categories h2 {
-    font-size: 32px;
+
+/* HOVER-EFFEKTER */
+
+.hero-text a,
+.daily-bottom a,
+.guide-content a,
+.category-card,
+button {
+    transition: transform 0.2s ease;
 }
 
-.categories-intro {
-    font-size: 18px;
-    margin-bottom: 35px;
-}
+/* Knapper og kort løfter sig */
 
-.category-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
+@media (hover: hover) {
 
-.category-card img {
-    height: 200px;
-}
-
-.category-text {
-    padding: 18px;
-    min-height: 125px;
-}
-
-.category-text h3 {
-    font-size: 21px;
-}
-
-.category-text p {
-    font-size: 15px;
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
+    .hero-text a:hover,
+    .daily-bottom a:hover,
+    .guide-content a:hover,
+    .category-card:hover,
+    button:hover {
+        transform: translateY(-4px);
+    }
 }
 
 
+/* TILGÆNGELIGHED – REDUCERET BEVÆGELSE */
 
+@media (prefers-reduced-motion: reduce) {
 
- 
-/* DAGENS GRØNNE VALG - DESKTOP */
-
-.daily-choice {
-    max-width: 1100px;
-    margin: -45px auto 60px;
-    padding: 35px;
-    border-radius: 30px;
-}
-
-.daily-label {
-    padding: 12px 18px;
-}
-
-.daily-label h2 {
-    font-size: 22px;
-}
-
-.daily-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    align-items: center;
-    margin-top: 35px;
-}
-
-.daily-content h3 {
-    font-size: 27px;
-    grid-column: 1;
-    align-self: end;
-}
-
-.daily-content p {
-    font-size: 18px;
-    grid-column: 1;
-    align-self: start;
-}
-
-.fridge-image {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 0;
-    transform: translateY(-35px);
-}
-
-.daily-bottom {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-top: 30px;
-    padding: 25px;
-}
-
-.daily-bottom h3 {
-    font-size: 20px;
-    flex: 1;
-}
-
-.daily-bottom p {
-    font-size: 16px;
-    flex: 1;
-}
-
-.daily-bottom a {
-    white-space: nowrap;
-}
-
-
- 
-/* GUIDE-SEKTION - DESKTOP */
-
-.guide-teaser {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    max-width: 1300px;
-    margin: 50px auto 70px;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-.guide-image {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.guide-content {
-    padding: 45px;
-}
-
-.guide-content h2 {
-    font-size: 30px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-}
-
-.guide-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.guide-content a {
-    margin-left: auto;
-}
-
-
-
-/* FOOTER - DESKTOP */
-
-.footer {
-    padding: 45px 6% 25px;
-}
-
-.footer-top {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 50px;
-    align-items: start;
-    padding-bottom: 40px;
-}
-
-.footer-logo {
-    width: 190px;
-    transform: none;
-}
-
-.footer-links {
-    transform: none;
-}
-
-.footer-links,
-.footer-social {
-    gap: 15px;
-}
-
-.footer h3 {
-    font-size: 19px;
-    margin-bottom: 10px;
-}
-
-.footer a {
-    font-size: 16px;
-    width: fit-content;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-.footer hr {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.footer-bottom {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-top: 25px;
-    justify-content: flex-end;
-    gap: 35px;
-}
-
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
 

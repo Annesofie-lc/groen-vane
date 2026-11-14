@@ -1,4 +1,22 @@
 
+/* GENERELLE SKRIFTTYPER */
+
+.guides-hero h1,
+.guides-intro h2,
+.guides-intro h3,
+.selected-guides h2,
+.guide-card h3,
+.small-changes h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-text a,
+.small-changes-text a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+
 /* HERO - GUIDES OG TIPS */
 
 .guides-hero {
@@ -67,6 +85,13 @@
     margin: 0;
 }
 
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
 .intro-content h2 {
     font-size: 25px;
     margin-bottom: 18px;
@@ -76,6 +101,16 @@
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image {
+    width: 180px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .intro-highlight {
@@ -95,8 +130,18 @@
     line-height: 1.5;
 }
 
+.intro-text a {
+    display: inline-block;
+    background-color: #E85A2A;
+    color: #F5F1E8;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+}
 
-/* UDVALGTE GUIDES sektionen */
+
+/* UDVALGTE GUIDES */
 
 .selected-guides {
     background-color: #003F38;
@@ -118,7 +163,9 @@
     line-height: 1.5;
 }
 
-/* UDVALGTE GUIDES selve guidekortene*/
+
+/* GUIDE-KORT */
+
 .guide-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -131,6 +178,7 @@
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 63, 56, 0.10);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .guide-card img {
@@ -204,13 +252,37 @@
 
 .small-changes-text a {
     display: inline-block;
-    background-color:#E85A2A;
+    background-color: #E85A2A;
     color: #F5F1E8;
     padding: 12px 20px;
     border-radius: 25px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+}
+
+
+/* HOVER OG FOKUS */
+
+.intro-text a,
+.small-changes-text a {
+    transition: transform 0.2s ease;
+}
+
+@media (hover: hover) {
+    .intro-text a:hover,
+    .small-changes-text a:hover {
+        transform: translateY(-4px);
+    }
+
+    .guide-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 14px rgba(0, 63, 56, 0.18);
+    }
+}
+
+.intro-text a:focus-visible,
+.small-changes-text a:focus-visible {
+    outline: 3px solid #003F38;
+    outline-offset: 4px;
 }
 
 
@@ -245,11 +317,12 @@
         height: 350px;
     }
 
+
     /* INTRODUKTION */
 
-   .guides-intro {
-    padding: 50px 40px;
-}
+    .guides-intro {
+        padding: 50px 40px;
+    }
 
     .intro-content {
         max-width: 850px;
@@ -259,6 +332,7 @@
     .intro-content h2 {
         font-size: 32px;
     }
+
 
     /* UDVALGTE GUIDES */
 
@@ -274,12 +348,22 @@
     .guide-cards {
         max-width: 1100px;
         margin: 0 auto;
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
 
     .guide-card img {
         height: 210px;
+    }
+}
+
+
+/* REDUCERET BEVÆGELSE */
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-text a,
+    .small-changes-text a,
+    .guide-card {
+        transition: none;
     }
 }
