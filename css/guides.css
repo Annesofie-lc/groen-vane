@@ -67,11 +67,11 @@
 }
 
 .guides-hero-image {
-    width: 85%;
-    height: 220px;
-    align-self: center;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius: 45% 15% 40% 15%;
+    object-position: center 40%;
+    border-radius: 25px;
 }
 
 
@@ -221,44 +221,68 @@
 }
 
 
-/* SMÅ ÆNDRINGER */
+/* 5 VANER */
 
 .small-changes {
-    background-color: #D7E4C5;
-    margin: 25px 15px;
-    padding: 20px;
-    border-radius: 35px;
+    background-color: #117A72;
+    padding: 30px 20px 10px 20px;
 }
 
-.small-changes-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 45% 20% 40% 20%;
-}
-
-.small-changes-text h2 {
-    font-size: 24px;
-    margin: 15px 0 10px;
-    color: #003F38;
-}
-
-.small-changes-text p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    color: #003F38;
-}
-
-.small-changes-text a {
-    display: inline-block;
-    background-color: #E85A2A;
+.small-changes h2 {
+    font-family: 'Montserrat', sans-serif;
     color: #F5F1E8;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
+.small-changes-intro {
+    color: #F5F1E8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* De enkelte vaner */
+
+.habit {
+    display: flex;
+    gap: 15px;
+    padding: 22px 0;
+    border-top: 1px solid #F5F1E8;
+}
+
+.habit-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: #F5F1E8;
+    margin-bottom: 8px;
+}
+
+.habit-content p {
+    color: #F5F1E8;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.habit-tip {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.habit-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #522B29;
+    background-color: #F5F1E8;
+    border: 2px solid #E85A2A;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* HOVER OG FOKUS */
 
@@ -290,32 +314,38 @@
 
 @media screen and (min-width: 769px) {
 
-    /* HERO */
+ /* HERO */
 
-    .guides-hero {
-        padding: 90px 40px;
-        min-height: 520px;
-    }
+.guides-hero {
+    padding: 90px 40px;
+    min-height: 520px;
+}
 
-    .guides-hero-content {
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-        min-height: 350px;
-    }
+.guides-hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    min-height: 350px;
+    max-width: 1450px;
+    margin: 0 auto;
+}
 
-    .guides-hero-text {
-        flex: 1;
-    }
+.guides-hero-text {
+    flex: 1;
+}
 
-    .guides-hero h1 {
-        font-size: 48px;
-    }
+.guides-hero h1 {
+    font-size: 48px;
+}
 
-    .guides-hero-image {
-        width: 45%;
-        height: 350px;
-    }
+.guides-hero-image {
+    width: 45%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center 40%;
+    border-radius: 30px;
+}
 
 
     /* INTRODUKTION */
@@ -333,6 +363,39 @@
         font-size: 32px;
     }
 
+    /* 5 VANER */
+
+.small-changes {
+    padding: 55px 40px 40px;
+}
+
+/* Begrænser indholdets bredde */
+
+.small-changes > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Overskrift */
+
+.small-changes h2 {
+    font-size: 32px;
+}
+
+/* Vanerne */
+
+.habit {
+    padding: 26px 0;
+}
+
+.habit-content h3 {
+    font-size: 20px;
+}
+
+.habit-content p {
+    font-size: 17px;
+}
 
     /* UDVALGTE GUIDES */
 
