@@ -110,6 +110,7 @@ main {
 
 .hero-content {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     padding: 40px 15px;
@@ -149,13 +150,12 @@ main {
 }
 
 .hero-image {
-  width: 100%;
+    width: 40%;
     height: 200px;
     object-fit: cover;
     object-position: center 40%;
     border-radius: 25px;
 }
-
 
 /* FÆLLES KNAPPER */
 

@@ -47,11 +47,22 @@
 
 .guides-hero-text {
     color: #F5F1E8;
+    flex: 1;
+    min-width: 0;
+}
+
+.guides-hero-text p {
+    font-size: 18px;
+    width: 100%;
+    max-width: none;
 }
 
 .guides-label {
+    display: block;
     color: #E85A2A;
     font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
 .guides-hero h1 {
@@ -209,10 +220,11 @@
 
 .guide-card-text a {
     font-size: 14px;
+    color:#E85A2A;
 }
 
 .guide-card-text a:hover {
-    color: #E85A2A;
+    color:#522B29;
 }
 
 .guide-card-text a:focus-visible {
@@ -314,38 +326,45 @@
 
 @media screen and (min-width: 769px) {
 
- /* HERO */
+/* HERO DESKTOP */
 
 .guides-hero {
-    padding: 90px 40px;
-    min-height: 520px;
+    padding: 40px 0 60px;
 }
 
 .guides-hero-content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 60px;
-    min-height: 350px;
-    max-width: 1450px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 30px;
+    gap: 40px;
 }
 
 .guides-hero-text {
     flex: 1;
+    padding-left: 20px;
+}
+
+.guides-hero-text p {
+    white-space: nowrap;
 }
 
 .guides-hero h1 {
-    font-size: 48px;
+    font-size: 38px;
+    line-height: 1.15;
 }
 
 .guides-hero-image {
-    width: 45%;
-    height: 370px;
+    width: 40%;
+    height: 320px;
     object-fit: cover;
     object-position: center 40%;
     border-radius: 30px;
 }
+
+
 
 
     /* INTRODUKTION */
