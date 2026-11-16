@@ -93,24 +93,6 @@ header {
     background-color: #003F38;
 }
 
-/* MOBIL NAVIGATION */
-
-nav {
-    display: none;
-}
-
-nav.active {
-    display: block;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
 /* Når menuen åbnes */
 
 header.menu-open {
@@ -126,22 +108,8 @@ header.menu-open .header-actions {
     order: 2;
 }
 
-header.menu-open nav {
-    display: block;
-    order: 3;
-    flex: 0 0 100%;
-    width: 100%;
-    background-color: #F5F1E8;
-    padding: 15px 20px 25px;
-}
-
 /* Menupunkter */
 
-nav a,
-nav a:visited {
-    color: #003F38;
-    text-decoration: none;
-}
 nav {
     display: none;
     order: 3;
@@ -154,6 +122,12 @@ nav {
 
 nav.active {
     display: block;
+}
+
+nav a,
+nav a:visited {
+    color: #003F38;
+    text-decoration: none;
 }
 
 nav ul {
@@ -175,7 +149,6 @@ main {
 
 .hero-content {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 10px;
     padding: 40px 15px;
@@ -222,7 +195,7 @@ main {
     border-radius: 25px;
 }
 
-/* FÆLLES KNAPPER */
+/* Fælles knapper */
 
 .hero-text a,
 .daily-bottom a,
@@ -532,11 +505,8 @@ main {
 
     /* HEADER */
 
-    header {
+header {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header > a {
@@ -597,11 +567,7 @@ header .header-actions {
 
     
 
-    /* HERO DESKTOP */
-
-    main {
-        padding: 0;
-    }
+/* Hero */
 
     .hero-content {
         max-width: 1200px;
@@ -634,7 +600,7 @@ header .header-actions {
         height: 320px;
     }
 
-    /* Dekorativ stjerne */
+ /* Dekorativ stjerne */
 
     .hero-content::after {
         content: "✳";
@@ -646,7 +612,7 @@ header .header-actions {
     }
 
 
-    /* KATEGORIER DESKTOP */
+/* Kategorier desktop */
 
     .categories {
         padding: 50px 5% 70px;
@@ -684,7 +650,7 @@ header .header-actions {
     }
 
 
-    /* DAGENS GRØNNE VALG - DESKTOP */
+ /* Dagens grønne valg */
 
     .daily-choice {
         max-width: 1100px;
@@ -755,7 +721,7 @@ header .header-actions {
     }
 
 
-    /* GUIDE-SEKTION - DESKTOP */
+ /* Guide-sektion */
 
     .guide-teaser {
         display: grid;
@@ -795,7 +761,7 @@ header .header-actions {
     }
 
 
-    /* FOOTER - DESKTOP */
+/* Footer */
 
     .footer {
         padding: 45px 6% 25px;
@@ -855,7 +821,7 @@ header .header-actions {
 }
 
 
-/* HOVER-EFFEKTER */
+/* Hover-effekter */
 
 .hero-text a,
 .daily-bottom a,
@@ -879,7 +845,7 @@ button {
 }
 
 
-/* TILGÆNGELIGHED – REDUCERET BEVÆGELSE */
+/* Tilgængelighed - Reduceret bevægelse */
 
 @media (prefers-reduced-motion: reduce) {
 
