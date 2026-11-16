@@ -10,7 +10,25 @@ body, p, input, select, textarea {
 }
 
 
-/*Kontaktform*/
+/* Kontaktform */
+
+/* Introduktion */
+
+.kontakt-intro {
+    margin-bottom: 35px;
+}
+
+.kontakt-intro h1 {
+    color: #F5F1E8;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.kontakt-intro p {
+    color: #F5F1E8;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
 input[type=text], input[type=email],input[type=tel], select, textarea { /*vælger de emner/typer som skal berøres af nedenstående css*/
   width: 100%;
@@ -25,6 +43,51 @@ input[type=text], input[type=email],input[type=tel], select, textarea { /*vælge
 
 .kontaktform p {
     margin-bottom: 1.5em;
+}
+
+.kontakt-formular h2 {
+    color: #F5F1E8;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.kontakt-tekst {
+    color: #F5F1E8;
+}
+
+/* KONTAKTOPLYSNINGER */
+
+.kontakt-info {
+    background-color:#F5F1E8;
+    color: #003F38;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+}
+
+.kontakt-info h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.kontakt-info-item {
+    margin-bottom: 18px;
+}
+
+.kontakt-info-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.kontakt-info-item p,
+.kontakt-info-item a {
+    color: #003F38;
+    font-size: 16px;
+}
+
+.kontakt-info-item a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /*Styling af dropdown*/
@@ -76,11 +139,6 @@ input[type=submit] {
 
 }
 
-input[type=submit]:hover {
-  background-color: #E85A2A;
-  transition: 0.5s;
- 
-}
 
 input[type=checkbox]{
 	margin: 0.8em 0;
