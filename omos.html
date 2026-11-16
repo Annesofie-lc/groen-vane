@@ -19,10 +19,13 @@
 
 </head>
 
+<body>
+    
     <!-- HEADER -->
 
-    <header>
-       <a href="index.html">
+  <header>
+
+    <a href="index.html">
         <img class="logo" src="img/logo-grønvane.png" alt="Grøn Vane - forsiden">
     </a>
 
@@ -30,8 +33,8 @@
         <ul>
             <li><a href="#">Inspiration</a></li>
             <li><a href="#">Myter og fakta</a></li>
-            <li><a href="#">Guides og tips</a></li>
-            <li><a href="#">Om os</a></li>
+            <li><a href="guides.html">Guides og tips</a></li>
+            <li><a href="omos.html">Om os</a></li>
         </ul>
     </nav>
 
@@ -53,15 +56,79 @@
         </button>
 
     </div>
-    </header>
+
+</header>
 
 
     <!--Kontaktform - hovedindhold--> 
-    <main class="kontaktform">
-        <h1>Kontakt os</h1>
-            <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
+  	<main class="kontaktform">
+		<h1>Kontakt os</h1>
+        <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
+	
+		<form>
+			<label for="navn">Navn</label> <!--'for' knyttes til <input> med id af samme navn -->
+			<input id="navn" type="text" required>
+			
+			<label for="adresse">Adresse</label><!--class="visually-hidden" kan bruges når man ønsker at bruge placeholder i input istedet for label, men stadig ønsker at have en tilgængelig mulighed som kan læses af en skærmlæser-->
+			<input id="adresse" type="text">
+			
+			<label for="telefon">Telefonnummer</label>
+			<input id="telefon" type="tel">
+			
+			<label for="mail">E-mail</label>
+			<input id="mail" type="email" required>
 
-       
+			<div class="custom-select">
+				<label for="region">Region</label>
+				<select id="region" name="select">
+					<option value="0" selected disabled>Vælg region</option> <!--Denne gør at der ikke autovælges en region for brugeren-->
+					<option value="1">Syddanmark</option>
+					<option value="2">Sjælland</option>
+					<option value="3">Hovedstaden</option>
+					<option value="4">Nordjylland</option>
+					<option value="5">Midtjylland</option>
+				</select>
+			</div>
+
+			<fieldset class="checkbox"> <!--Checkbox giver muligheden for at vælge flere 'services' på en gang. -->
+				<legend>Hvilke services ønsker du tilbud på?</legend>
+				<div>
+					<input type="checkbox" name="services" id="rengøring" value="Rengøring">
+					<label for="rengøring">Rengøring</label>
+				</div>
+					
+				<div>
+					<input type="checkbox" name="services" id="vinduespudser" value="Vinduespudser">
+					<label for="vinduespudser">Vinduespudser</label>
+				</div>
+					
+				<div>
+					<input type="checkbox" name="services" id="bilrengoring" value="Bilrengøring">
+					<label for="bilrengoring">Bilrengøring</label>
+				</div>
+					
+				<div>
+					<input type="checkbox" name="services" id="havearbejde" value="Havearbejde">
+					<label for="havearbejde">Havearbejde</label>
+				</div>
+			</fieldset>
+				
+			<label for="besked">Besked</label>
+			<textarea name="besked" id="besked" rows="8" cols="60"></textarea> <!--Textarea giver mulighed for at skrive en større besked. Størrelse defineres ved brug af rows og cols-->	
+				
+			<fieldset> <!-- <fieldset> grupperer relaterede elementer i en form. Den tilføjer endvidere en streg rundt om de relaterede elementer. <legend> definere en titel/caption for en fieldsetgruppe-->
+				<legend>Må vi kontakte dig på din telefon?</legend>
+				<!--radiobutton skal have samme 'name' for at der kun kan vælges en knap og denne kan ses som værende en gruppe-->
+				<input id="ja" type="radio" value="ja" name="kontaktes">
+				<label for="ja">Ja</label>
+				
+				<input id="nej" type="radio" value="nej" name="kontaktes">
+				<label for="nej">Nej</label>
+			</fieldset>
+				
+			<input type="submit" name="submit" value="Send">
+		
+		</form>
             
     </main>
 
@@ -124,3 +191,5 @@
     </div>
 
 </footer>
+
+</body>
