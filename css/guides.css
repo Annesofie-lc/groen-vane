@@ -366,22 +366,25 @@
 
 
 
-    /* INTRODUKTION */
+/* INTRODUKTION */
 
     .guides-intro {
         padding: 50px 40px;
     }
 
-    .intro-content {
-        max-width: 850px;
-        margin: 0 auto;
-    }
-
+   .intro-content {
+    max-width: 850px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
     .intro-content h2 {
         font-size: 32px;
     }
 
-    /* 5 VANER */
+/* 5 VANER */
 
 .small-changes {
     padding: 55px 40px 40px;
@@ -415,27 +418,28 @@
     font-size: 17px;
 }
 
-    /* UDVALGTE GUIDES */
+/* UDVALGTE GUIDES */
 
-    .selected-guides {
-        padding: 60px 40px;
-    }
+ .selected-guides {
+    padding: 60px 40px;
+}
 
-    .selected-guides-heading {
-        max-width: 1100px;
-        margin: 0 auto 35px;
-    }
+.selected-guides-heading {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+}
 
-    .guide-cards {
-        max-width: 1100px;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
+.guide-cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-    .guide-card img {
-        height: 210px;
-    }
+.guide-card img {
+    height: 210px;
+}
+
 }
 
 

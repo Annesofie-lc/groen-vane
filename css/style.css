@@ -41,6 +41,14 @@ header {
     padding: 20px;
 }
 
+/* HOVER I HEADER */
+
+header nav a:hover,
+header .search-button:hover {
+    color: #E85A2A;
+    transition: color 0.2s ease;
+}
+
 /* Logo */
 
 .logo {
