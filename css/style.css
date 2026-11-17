@@ -138,6 +138,20 @@ nav ul {
     padding: 0;
 }
 
+/* Gå til hovedinhold */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    z-index: 1000;
+    background-color: #F5F1E8;
+    color: #003F38;
+    padding: 12px;
+}
 
 /* HERO-SEKTION */
 
